@@ -14,6 +14,7 @@ if defined?(Bundler)
   # If you want your assets lazily compiled in production, use this line
   # Bundler.require(:default, :assets, Rails.env)
 end
+config.assets.initialize_on_precompile = false
 
 module Rails3BootstrapDeviseCancan
   class Application < Rails::Application
@@ -75,7 +76,6 @@ module Rails3BootstrapDeviseCancan
 
     # Enable the asset pipeline
     config.assets.enabled = true
-    config.assets.initialize_on_precompile = false
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
   end
